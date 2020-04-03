@@ -1,5 +1,6 @@
 const moongose = require("mongoose");
 const mongoosePaginate = require("mongoose-paginate");
+const uniqueValidator = require("mongoose-unique-validator");
 
 const ProfessorSchema = new moongose.Schema({
   name: {
@@ -12,7 +13,8 @@ const ProfessorSchema = new moongose.Schema({
   },
   email: {
     type: String,
-    required: true
+    required: true,
+    unique: true
   },
   createdAt: {
     type: Date,
@@ -21,4 +23,6 @@ const ProfessorSchema = new moongose.Schema({
 });
 
 ProfessorSchema.plugin(mongoosePaginate);
+ProfessorSchema.plugin(uniqueValidator);
+
 moongose.model("Professor", ProfessorSchema);

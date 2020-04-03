@@ -1,22 +1,25 @@
 const moongose = require("mongoose");
 const mongoosePaginate = require("mongoose-paginate");
+const uniqueValidator = require('mongoose-unique-validator');
 
 const AlunoSchema = new moongose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
+    trim: true,
   },
   age: {
     type: Number,
-    required: true
+    required: true,
   },
   email: {
     type: String,
-    required: true
+    required: true,
+    trim: true,
+    unique: true,
   },
   updatedAt: {
     type: Date,
-    default: Date.now
   },
   createdAt: {
     type: Date,
@@ -25,5 +28,6 @@ const AlunoSchema = new moongose.Schema({
 });
 
 AlunoSchema.plugin(mongoosePaginate);
+AlunoSchema.plugin(uniqueValidator);
 
 moongose.model("Aluno", AlunoSchema);

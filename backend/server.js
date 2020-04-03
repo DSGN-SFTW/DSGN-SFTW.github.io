@@ -1,5 +1,5 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const DB_Connect = require('./src/controllers/DB_Connection');
 const requireDir = require("require-dir");
 const cors = require("cors");
 
@@ -8,10 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 //Start Database
-mongoose.connect("mongodb://localhost:27017/4code", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+DB_Connect();
 requireDir("./src/models/");
 
 app.use("/", require("./src/routes"));

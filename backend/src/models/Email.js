@@ -1,5 +1,5 @@
 function generateHtml(link, user) {
-//Credit by email body : https://codepen.io/reallygoodemails/pen/JaNpxB
+  //Credit by email body : https://codepen.io/reallygoodemails/pen/JaNpxB
 
   let html = ` <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -73,7 +73,7 @@ function generateHtml(link, user) {
     </tr>
     <tr>
     <td style="-ms-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; color: #9095a2; font-family: 'Postmates Std', 'Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 16px; font-smoothing: always; font-style: normal; font-weight: 400; letter-spacing: -0.18px; line-height: 24px; mso-line-height-rule: exactly; text-decoration: none; vertical-align: top; width: 100%;">
-                Ola, ${user} recebemos uma solicitação para redefinir sua senha do 4code.
+                Ola, <b>${user}</b>    recebemos uma solicitação para redefinir sua senha do 4code.
     </td>
     </tr>
     <tr>

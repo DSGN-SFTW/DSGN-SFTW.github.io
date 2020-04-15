@@ -16,7 +16,7 @@ git clone https://github.com/DSGN-SFTW/DSGN-SFTW.github.io.git
 
 ### Description
 
-Essa API serve para a autenticação no site do projeto 4code.
+Essa API serve para o CRUD e autenticacao no site do projeto 4code.
 
 ### Hierarchy
 
